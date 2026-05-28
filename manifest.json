@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "UniversalReplacerJsCss Tests",
+  "version": "2.0",
+  "description": "Activa o desactiva CSS con un botón.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "icons": {
+    "16": "icono.png",
+    "48": "icono.png",
+    "128": "icono.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icono.png",
+      "24": "icono.png",
+      "32": "icono.png"
+    }
+  }
+}
