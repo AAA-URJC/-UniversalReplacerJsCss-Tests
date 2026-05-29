@@ -1,7 +1,4 @@
-/* =========================================
-   1. FONDOS GENERALES (Mata el blanco)
-   ========================================= */
-/* Contenedores principales de la página */
+
 body#tod,
 div#ven3,
 div#contralista,
@@ -10,22 +7,19 @@ div#conten1 {
     color: #f1f1f1 !important;
 }
 
-/* La barra superior de estadísticas (Cuestión, Aciertos, Fallos) */
+
 div#datos {
     background-color: #252525 !important;
     border: none !important;
     border-bottom: 1px solid #444 !important;
 }
 
-/* Colores de texto de la barra superior */
+
 #d1, #d4, #cuestion, #pp { color: #e0e0e0 !important; }
 #d2, #aciertos { color: #85d985 !important; } /* Aciertos - Verde suave */
 #d3, #fallos { color: #ff7b7b !important; } /* Fallos - Rojo suave */
 
-/* =========================================
-   2. PANEL LATERAL DERECHO (Cuestiones)
-   ========================================= */
-/* Contenedor del panel y su cabecera */
+
 div#listacuestiones,
 div#listacuestiones .bc2 {
     background-color: #252525 !important;
@@ -33,7 +27,7 @@ div#listacuestiones .bc2 {
     color: #f1f1f1 !important;
 }
 
-/* Cada botón de pregunta en el panel (Sobrescribe los rgb blancos/rojos) */
+
 div#lista table {
     background-color: #333333 !important;
     border-bottom: 1px solid #444 !important;
@@ -44,21 +38,17 @@ div#lista table:hover {
     background-color: #4a4a4a !important;
 }
 
-/* Iconos (canvas) del panel lateral */
+
 div#lista canvas {
     filter: invert(0.8) grayscale(1) !important;
 }
 
-/* =========================================
-   3. BOTONES INFERIORES
-   ========================================= */
-/* Contenedor inferior */
 div#abajo {
     background-color: #252525 !important;
     border-top: 1px solid #444 !important;
 }
 
-/* Botones: Posponer, No contestar, Contestar */
+
 div#abajo .but,
 div#boton {
     background-color: #3a3a3a !important;
@@ -75,17 +65,14 @@ div#boton:hover {
     cursor: pointer !important;
 }
 
-/* =========================================
-   4. ZONA DE LA PREGUNTA (El Test en sí)
-   ========================================= */
-/* Quitamos el fondo a la tabla principal para usar el general */
+
 table.w {
     background-color: transparent !important;
     border: none !important;
     box-shadow: none !important;
 }
 
-/* Enunciado principal */
+
 td#pri1 {
     color: #f8f9fa !important;
     font-size: 16px !important;
@@ -93,7 +80,6 @@ td#pri1 {
     border-bottom: none !important;
 }
 
-/* Filas de las opciones de respuesta */
 td#cuestiones1 tr {
     background-color: transparent !important;
     display: flex !important;
@@ -101,47 +87,43 @@ td#cuestiones1 tr {
     margin-bottom: 8px !important;
     padding: 12px 15px !important;
     border-radius: 6px !important;
-    border: none !important; /* Borde sutil estilo Moodle */
+    border: none !important; 
 }
 
-/* Efecto al pasar el ratón por las opciones */
 td#cuestiones1 tr:hover {
     background-color: rgba(255, 255, 255, 0.05) !important;
     border: none !important;
 }
 
-/* Texto de las opciones de respuesta */
+
 td#cuestiones1 tr td.pr05 {
     font-size: 14px !important;
     color: #e0e0e0 !important;
 }
 
-/* 1. Ocultar el canvas "fantasma" que Daypo usa de relleno */
 td#cuestiones1 canvas[id^="vai"] {
     display: none !important;
 }
 
-/* 2. Dejar que Daypo dibuje el círculo, pero cambiamos su color a plateado */
+
 td#cuestiones1 canvas[id^="op"] {
     margin-right: 6px !important;
     width: 24px !important;
     height: 24px !important;
 
-    /* Quitamos los bordes y fondos forzados para que sea transparente */
+    
     background-color: transparent !important;
     border: none !important;
     border-radius: 0 !important;
 
-    /* Magia: Invertimos el color negro por defecto de Daypo a un gris claro/plateado.
-       Así, el círculo vacío se ve gris, y el círculo relleno también se ve gris. */
+   
     filter: invert(0.75) brightness(1.2) !important;
 }
 
-/* Opcional: Un ligerísimo brillo en el canvas al pasar el ratón por la fila */
+
 td#cuestiones1 tr:hover canvas[id^="op"] {
     filter: invert(0.9) brightness(1.5) !important;
 }
-/* 3. Eliminar el ancho fijo de la celda para quitar el hueco extra */
 td#cuestiones1 tr td.w2 {
     width: auto !important;
 }
